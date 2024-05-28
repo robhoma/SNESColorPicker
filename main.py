@@ -8,8 +8,6 @@ def main():
     window.geometry("400x200")
     window.resizable(False, False)
     window.title("SNES Color Picker")
-    img = tk.PhotoImage(file="./SNESColorPicker.png")
-    window.iconphoto(False, img)
     canvas = tk.Canvas(window, width=1000, height=1000)
     canvas.pack()
     rectangle = canvas.create_rectangle(30, 40, 110, 120, fill='red')
@@ -56,7 +54,6 @@ def main():
 
     def pickColor():
         color = colorchooser.askcolor('red', title="Choose a Color")
-        print(color)
 
         rectangle = canvas.create_rectangle(30, 40, 110, 120, fill=(str(color[1])))
 
